@@ -1,0 +1,101 @@
+html, body {
+  font-family: 'Open Sans', arial, sans-serif;
+  padding: 10px 20px;
+}
+h1 {
+  font-size: 1.6em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+h3 {
+  font-size: 1.1em;
+  margin: 10px 0 20px;
+  font-weight: bold;
+}
+ul {
+  margin: 10px 0 30px;
+}
+ul ul {
+  margin-bottom: 10px;
+}
+p {
+  margin: 5px 0;
+}
+p, li {
+  line-height: 1.5em;
+}
+li {
+  list-style-type: none;
+}
+a,
+a:visited {
+  color: #4086BF;
+  text-decoration: none;
+}
+a:hover {
+  color: #4E6CD5;
+  text-decoration: underline;
+}
+em {
+  font-style: italic;
+  color: black;
+}
+strong {
+  font-weight: normal;
+}
+h4 {
+  margin: 30px 0 10px;
+}
+section {
+  display: table;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.subsection {
+  display: table-row;
+}
+.subsection 
+.subsection h2 {
+}
+.subsection h3 {
+}
+#page-header {
+  margin-bottom: 7em;
+}
+#page-header h1 {
+  margin-bottom: 0px;
+}
+#page-header h1 {
+  font-size: 2em;
+  margin: 0;
+  width: 80%;
+  color: black;
+}
+#content-wrapper {
+  position: relative;
+}
+#contact-info {
+  position: absolute;
+  left: 70%;
+  top: 0px;
+  font-size: 1.3em;
+}
+#main {
+  position: absolute;
+}
+li {
+  margin: 5px 0 5px 20px;
+}
+.deets {
+  display: table-cell;
+  padding-bottom: 2em;
+  padding-left: 25px;
+}
+.timeline {
+  display: table-cell;
+  width: 17%;
+}
