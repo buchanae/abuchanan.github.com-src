@@ -1,0 +1,21 @@
+css:
+  #foo {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+  @-moz-keyframes resize {
+    50% {
+      background-color: #ddd;
+    }
+    100% {
+      background-color: black;
+    }
+  }
+  #foo {
+    -moz-animation-name: resize;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+  }
+
+#foo

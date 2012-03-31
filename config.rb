@@ -2,6 +2,12 @@
 # Compass
 ###
 
+Tilt.prefer Tilt::KramdownTemplate
+
+Slim::Engine.set_default_options :pretty => true
+
+require 'animate-sass'
+
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
 # require 'susy'
@@ -37,6 +43,7 @@
 # 
 
 page "resume.html", :layout => :blank
+page "foo.html", :layout => false
 
 # 
 # A path which all have the same layout

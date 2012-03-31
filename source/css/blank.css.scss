@@ -1,4 +1,4 @@
-html, body {
+html {
   font-family: 'Open Sans', arial, sans-serif;
   padding: 10px 20px;
 }
@@ -8,19 +8,12 @@ h1 {
   margin-bottom: 1em;
 }
 h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 h3 {
-  font-size: 1.1em;
-  margin: 10px 0 20px;
+  font-size: 1em;
   font-weight: bold;
-}
-ul {
-  margin: 10px 0 30px;
-}
-ul ul {
-  margin-bottom: 10px;
 }
 p {
   margin: 5px 0;
@@ -29,8 +22,11 @@ p, li {
   line-height: 1.5em;
 }
 li {
-  list-style-type: none;
+  margin: 5px 0 5px 0px;
+
+  list-style-type: circle;
 }
+
 a,
 a:visited {
   color: #4086BF;
@@ -40,6 +36,7 @@ a:hover {
   color: #4E6CD5;
   text-decoration: underline;
 }
+
 em {
   font-style: italic;
   color: black;
@@ -50,52 +47,40 @@ strong {
 h4 {
   margin: 30px 0 10px;
 }
+
 section {
   display: table;
   width: 100%;
-  margin-bottom: 2em;
 }
 .subsection {
   display: table-row;
 }
-.subsection 
-.subsection h2 {
-}
-.subsection h3 {
-}
 #page-header {
-  margin-bottom: 7em;
-}
-#page-header h1 {
-  margin-bottom: 0px;
-}
-#page-header h1 {
-  font-size: 2em;
-  margin: 0;
-  width: 80%;
-  color: black;
-}
-#content-wrapper {
-  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 1em;
+
+  h1 {
+    margin-bottom: 0px;
+    font-size: 2em;
+    margin: 0;
+    width: 80%;
+    color: black;
+  }
 }
 #contact-info {
-  position: absolute;
-  left: 70%;
-  top: 0px;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
-#main {
-  position: absolute;
-}
-li {
-  margin: 5px 0 5px 20px;
-}
-.deets {
+.leftcol {
   display: table-cell;
-  padding-bottom: 2em;
-  padding-left: 25px;
+  width: 80%;
 }
-.timeline {
+.rightcol {
   display: table-cell;
-  width: 17%;
+  text-align: right;
+}
+.subsection {
+  .leftcol {
+    padding: 0 0 20px 20px;
+  }
 }
