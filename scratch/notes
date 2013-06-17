@@ -1,0 +1,54 @@
+email updates signup w/ mailchimp, facebook, twitter, etc
+
+
+blog post: koans
+
+blog post: jenkins plus munin (plus virtualbox?)
+
+blog: html to pdf
+
+blog: perl, what it makes hard, try/catch, good dev, where is perl 6?  how long has it been since last release?
+
+
+could the meritocracy be applied to getting open source developers paid?  e.g. incentive to contribute money to other developers is the prestige gained by being someone who has contributed a lot of money to good developers?
+
+
+examples of testing where it's really difficult to prove things are correct, while not duplicating/using the code you are testing.  e.g. genecounter read classification
+
+the "right" way takes longer, more effort
+
+
+i spend a lot of time working on messy code trying to figure out the right amount of code to change:  doing it the ideal "right" way could mean changing a lot of code, while doing it quick and dirty just means more future problems.  how often is code built ideally from the start and stays that way?  how much time does that save?  most of my time is spent deciding the proper compromise between the two ends of the spectrum
+
+
+vim and the delete key, i love vim, but sometimes the issues you have to solve are ridiculous
+
+
+bioinformatics needs a revolution in file formats.  everything comes in a different format.  imagine if this happened to websites.  is your output format understandable?  is it easily morphed?
+
+
+hadoop: scaling up bbut not scaling down
+
+scala: companion objects, e.g. Gene.from_gff and the way it forces you to write clean, separated code
+
+scala: operator chaos.  wayyyy to many non-readable operators, such as :_*
+why have one-based tuples and zero-based seqs and array?! madness
+why have a different operator for accessing tuples than seqs?! madness
+seems like scala kinda forces you to enfore rules on your code style to rule out things you don't like.  what are the things that are unavoidable though?
+thoughts on the use of "return" in scala and how it may differ coming from python 
+Array vs ArrayBuffer has to do with resizing.  things you don't think about in python
+
+
+"""
+So far, I wouldn't feel comfortable introducing Scala into a professional project.  Much of the Scala community might berate me for that statement, but I 
+"""
+
+'""
+I love exploring new corners of python.  write about functools partial
+"""
+
+
+icons from http://www.physorg.com/news/2011-12-secrets-levitating-slinky-viral-web.html
+
+
+inception of thought

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+  {{# articles }}
+    <div class="teaser">
+      {{#teaser}}
+        {{> article }}
+      {{/teaser}}
+      <p class="read-more"><a href="{{ url }}">read the rest &raquo;</a></p>
+    </div>
+  {{/ articles }}
