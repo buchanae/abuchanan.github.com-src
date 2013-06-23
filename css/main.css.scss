@@ -1,5 +1,4 @@
 @import "compass/css3";
-@import "animate.sass";
 
 html, body {
   background-color: #d3d3d3;
@@ -165,16 +164,6 @@ section {
   }
 }
 
-.trivia {
-  display: none;
-}
-
-
-.trivia.test {
-  display: inline;
-  opacity: 0;
-  @include animation(fadeIn, 5s, ease, 0.2s, 2, alternate);
-}
 
 .clear {
   clear: both;

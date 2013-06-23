@@ -1,4 +1,5 @@
+---
 title: Home
-url: /index.html
+path: index.html
 ---
 Foo
