@@ -1,3 +1,4 @@
+from distutils import dir_util
 import logging
 import os
 import shutil
@@ -23,7 +24,9 @@ BUILD_DIR = 'built'
 scss_ = scss.Scss(search_paths=[
     'third-party/compass/frameworks/compass/stylesheets/',
     'third-party/compass/frameworks/blueprint/stylesheets/',
-])
+], scss_opts={
+    'compress': False,
+})
 
 
 def build():
@@ -34,6 +37,7 @@ def build():
 
     content = markdowner.convert(raw)
     out = template.render({
+        'meta': content.metadata,
         'content': str(content),
     })
 
@@ -45,11 +49,10 @@ def build():
     path = os.path.join(BUILD_DIR, path)
 
     for p in ['img', 'css', 'js']:
-        shutil.copytree(p, os.path.join(BUILD_DIR, p))
+        dir_util.copy_tree(p, os.path.join(BUILD_DIR, p))
 
     with open(path, 'w') as out_fh:
         out_fh.write(out)
-
 
     with open('css/main.css.scss') as fh:
         css = scss_.compile(fh.read())
@@ -59,7 +62,5 @@ def build():
 
 
 if __name__ == '__main__':
-
-    shutil.rmtree(BUILD_DIR)
 
     build()

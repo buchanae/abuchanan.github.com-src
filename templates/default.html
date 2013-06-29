@@ -22,6 +22,8 @@
 
   <title>Alex Buchanan</title>
 
+  <link rel='stylesheet' href='/css/style.css'>
+  <link rel='stylesheet' href='/css/fonts.css'>
   <link rel='stylesheet' href='/css/main.css'>
 
   <script src='/js/libs/modernizr-2.0.6.min.js'></script>
@@ -30,16 +32,30 @@
 <body>
 
   <header id='site-header'>
-    <h1>Title</h1>
+    <h1>Site Title</h1>
   </header>
 
-  <main role='main'>{{ content }}</main>
+  <main id='main' role='main'>
+  <article>
+
+    <div class='article-img'>
+      <img src='/img/{{ meta.img }}'/>
+    </div>
+    <div class='article-content'>
+    <header>
+      <h1>{{ meta.title }}</h1>
+    </header>
+
+    {{ content }}
+    </div>
+  </article>
 
   <div class='clear'></div>
 
   <footer id='site-footer'>
     <p><a href='//www.wikipedia.org/wiki/Copyleft)'>Copyleft</a>. <a href='//github.com/abuchanan'>source</a></p>
   </footer>
+  </main>
 
   <nav id='site-nav'>
     <a href='//github.com/abuchanan'><img src='/img/github.png'></a>
