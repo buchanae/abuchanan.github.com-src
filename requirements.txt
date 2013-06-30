@@ -1,0 +1,4 @@
+Jinja2==2.7
+MarkupSafe==0.18
+markdown2==2.1.0
+pyScss==1.1.5
