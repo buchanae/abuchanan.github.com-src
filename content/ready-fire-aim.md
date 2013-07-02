@@ -1,7 +1,6 @@
 ---
 title: Ready, fire, aim
 img: readyfireaim.jpg
-path: index.html
 ---
 
 I just read [Joel Spolsky](http://www.joelonsoftware.com/)'s post entitled _[Fire and Motion](http://www.joelonsoftware.com/articles/fog0000000339.html)_.  Man that guy is awesome.  I just love reading his stuff, and it always inspires me to be better at what I do.

@@ -29,31 +29,62 @@ scss_ = scss.Scss(search_paths=[
 })
 
 
+class Page(object):
+
+    def __init__(self, name):
+        self.name = name
+        self.content_path = os.path.join('content', name + '.md')
+
+        with open(self.content_path) as fh:
+            self.raw_content = fh.read()
+
+        self.content = markdowner.convert(self.raw_content)
+        self.metadata = self.content.metadata
+
+        self.web_path = self.metadata.get('path', name + '.html').lstrip('/')
+
+
 def build():
-    template = env.get_template('default.html')
 
-    with open('content/index.md') as fh:
-        raw = fh.read()
-
-    content = markdowner.convert(raw)
-    out = template.render({
-        'meta': content.metadata,
-        'content': str(content),
-    })
-
+    # Ensure build output directory exists
     if not os.path.exists(BUILD_DIR):
         os.makedirs(BUILD_DIR)
 
-    path = content.metadata['path']
-    path = path.lstrip('/')
-    path = os.path.join(BUILD_DIR, path)
 
+    # Build pages
+    pages = ['3d-tree-v0.1', 'ready-fire-aim']
+    pages = [Page(name) for name in pages]
+
+    for page in pages:
+
+        template = page.metadata.get('template', 'default-article') + '.html'
+        template = env.get_template(template)
+
+        out = template.render({
+            'meta': page.metadata,
+            'content': str(page.content),
+        })
+
+        # TODO detect output path that conflicts with another page
+
+        build_path = os.path.join(BUILD_DIR, page.web_path)
+
+        with open(build_path, 'w') as out_fh:
+            out_fh.write(out)
+
+
+    # Copy first page to index.html
+    build_path = os.path.join(BUILD_DIR, pages[0].web_path)
+    index_path = os.path.join(BUILD_DIR, 'index.html')
+    shutil.copyfile(build_path, index_path)
+
+
+    # Copy static assests
     for p in ['img', 'css', 'js']:
         dir_util.copy_tree(p, os.path.join(BUILD_DIR, p))
 
-    with open(path, 'w') as out_fh:
-        out_fh.write(out)
 
+    # Compile and write scss
     with open('css/main.css.scss') as fh:
         css = scss_.compile(fh.read())
 
@@ -64,3 +95,4 @@ def build():
 if __name__ == '__main__':
 
     build()
+    print 'built'

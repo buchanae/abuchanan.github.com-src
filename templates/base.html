@@ -34,24 +34,11 @@
 <body>
 
   <main id='main' role='main'>
-  <article>
-
-    <div class='article-img'>
-      <img src='/img/{{ meta.img }}'/>
-    </div>
-    <div class='article-content'>
-    <header>
-      <h1>{{ meta.title }}</h1>
-    </header>
-
-    {{ content }}
-    </div>
-  </article>
+  {% block main_content %}{% endblock %}
 
   <div class='clear'></div>
 
   <footer id='site-footer'>
-    <p><a href='//www.wikipedia.org/wiki/Copyleft)'>Copyleft</a>. <a href='//github.com/abuchanan'>source</a></p>
   </footer>
   </main>
 
@@ -60,7 +47,7 @@
     <a href='//facebook.com/buchanae'><img src='/img/fb.png'></a>
   </nav>
 
-  <img id='tree' src='/img/tree.png'>
+  <img id='sidebar-tree' src='/img/tree.png'>
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
   <script>

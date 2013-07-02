@@ -29,7 +29,7 @@ h3 {
   margin: 10px 0;
 }
 p {
-  margin: 10px 0;
+  margin: 25px 0;
 }
 
 a {
@@ -60,7 +60,7 @@ small {
   margin: 40px 0px;
 }
 
-#tree {
+#sidebar-tree {
   position: fixed;
   bottom: 0px;
   right: 20px;
@@ -82,13 +82,6 @@ small {
   padding: 50px 50px 0px;
 
 
-  ul {
-    list-style: none;
-    &:before { 
-      content: "\002D \0020 \00A0";
-    }
-  }
-
   p, li {
     line-height: 1.5em;
   }
@@ -97,11 +90,20 @@ small {
 .article-img {
   float: left;
   text-align: center;
+}
+.article-img img {
   width: 160px;
 }
+
 .article-content {
   margin-left: 200px;
 }
+
+.no-img .article-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .article-aside {
   float: left;
   width: 6%;
