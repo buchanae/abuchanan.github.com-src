@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Ready, fire, aim
 img: readyfireaim.jpg
 path: index.html
 ---
