@@ -1,0 +1,65 @@
+proliferation of formats is bad
+
+we're not utilizing existing formats with very strong qualities
+- JSON
+
+why is JSON the best option
+
+
+ya, i can convert fastg to fasta easily, but then i must maintain both
+very large files
+
+
+seriously, does anyone really look at fasta files in a text editor?
+when is that useful?
+
+
+people will have to write additional parsers for all this
+
+
+proposed benefits of "linear representation"
+- matches linearity of genome
+- natural coordinates
+- easy to read and interpret
+--- fastg is not easy to interpret
+- universe of tools
+--- all those tools must change to adapt to fastg
+
+
+don't try to cram too much information into one file
+
+prevents efficient access to data because the entire
+genome sequence must be parsed to access them
+
+
+i'm sure fastg is missing support for some sort of nonlinear data
+and then the format will need to change to support that, starting
+this ridiculous cycle all over
+
+
+how to these mid-line tags deal with the 70-80 character line widths
+common to fasta?
+
+
+to use fastg data in tools, i have to parse it out into a separate 
+data structure anyway.  don't make me do that, just give it to me
+separately to begin with.
+
+there is very little reason to have this data inline.
+
+
+
+hacking complicated graphs into a text file isn't the solution.  we should
+be shuttling people into an age of advanced visualization tools, not archaic 
+text file formats.
+
+
+when you find yourself writing a section on number format grammar, you're doing
+something wrong.  that's been done.  KISS
+
+
+
+
+libraries parsing fastg will inevitably come up with their own attributes names
+for the fields that aren't specified in the spec.  once again, JSON would
+alleviate this issue

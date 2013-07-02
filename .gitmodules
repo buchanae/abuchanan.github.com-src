@@ -1,0 +1,3 @@
+[submodule "third-party/compass"]
+	path = third-party/compass
+	url = https://github.com/chriseppstein/compass.git

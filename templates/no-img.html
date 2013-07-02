@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+
+  <article class='no-img'>
+    <div class='article-content'>
+    <header>
+      <h1>{{ meta.title }}</h1>
+    </header>
+
+    {{ content }}
+    </div>
+  </article>
+
+{% endblock %}
