@@ -1,3 +1,5 @@
+http://fastg.sourceforge.net/FASTG_Spec_v1.00.pdf
+
 proliferation of formats is bad
 
 we're not utilizing existing formats with very strong qualities
