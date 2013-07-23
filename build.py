@@ -53,9 +53,10 @@ def build():
 
     # Build pages
     pages = [
+        'game-v0',
         'happy-bday-to-you',
         '3d-tree-v0.1',
-        'ready-fire-aim'
+        'ready-fire-aim',
     ]
     pages = [Page(name) for name in pages]
 
