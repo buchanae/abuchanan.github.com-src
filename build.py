@@ -52,7 +52,11 @@ def build():
 
 
     # Build pages
-    pages = ['3d-tree-v0.1', 'ready-fire-aim']
+    pages = [
+        'happy-bday-to-you',
+        '3d-tree-v0.1',
+        'ready-fire-aim'
+    ]
     pages = [Page(name) for name in pages]
 
     for page in pages:
