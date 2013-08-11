@@ -7,6 +7,7 @@
 
   <title>Alex Buchanan</title>
 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel='stylesheet' href='/css/style.css'>
   <link rel='stylesheet' href='/css/fonts.css'>
   <link rel='stylesheet' href='/css/main.css'>
@@ -42,12 +43,13 @@
   </footer>
   </main>
 
-  <nav id='site-nav'>
-    <a href='//github.com/abuchanan'><img src='/img/github.png'></a>
-    <a href='//facebook.com/buchanae'><img src='/img/fb.png'></a>
-  </nav>
+  {% if prev %}
+  <a href='{{ prev }}' id='prev' class='prev-next-link' title='previous post'><i class='icon-arrow-left'></i></a>
+  {% endif %}
 
-  <img id='sidebar-tree' src='/img/tree.png'>
+  {% if next %}
+  <a href='{{ next }}' id='next' class='prev-next-link' title='next post'><i class='icon-arrow-right'></i></a>
+  {% endif %}
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
   <script>

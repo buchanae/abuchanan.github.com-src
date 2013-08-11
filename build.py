@@ -53,6 +53,7 @@ def build():
 
     # Build pages
     pages = [
+        'art-2',
         'art-1',
         'happy-bday-to-you',
         '3d-tree-v0.1',
@@ -60,14 +61,25 @@ def build():
     ]
     pages = [Page(name) for name in pages]
 
-    for page in pages:
+    for i, page in enumerate(pages):
 
         template = page.metadata.get('template', 'default-article') + '.html'
         template = env.get_template(template)
 
+        next_, prev = None, None
+
+        if i > 0:
+            next_ = pages[i - 1].web_path
+
+        if i < len(pages) - 1:
+            prev = pages[i + 1].web_path
+
+
         out = template.render({
             'meta': page.metadata,
             'content': str(page.content),
+            'next': next_,
+            'prev': prev,
         })
 
         # TODO detect output path that conflicts with another page
