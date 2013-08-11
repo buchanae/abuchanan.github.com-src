@@ -53,6 +53,7 @@ def build():
 
     # Build pages
     pages = [
+        'art-1',
         'happy-bday-to-you',
         '3d-tree-v0.1',
         'ready-fire-aim'
